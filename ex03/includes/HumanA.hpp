@@ -6,7 +6,7 @@
 /*   By: lorey <lorey@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 02:29:22 by lorey             #+#    #+#             */
-/*   Updated: 2025/02/14 02:39:51 by lorey            ###   LAUSANNE.ch       */
+/*   Updated: 2025/02/14 14:15:00 by lorey            ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 class HumanA
 {
 	private:
-		std::string _name;
-		Weapon _w1;		
+		std::string		_name;
+		Weapon			&_w1;
 	public:
-		HumanA(std::string name, Weapon w1);
+		HumanA(std::string name, Weapon &w1);
 		~HumanA();
 		void	attack();
 };

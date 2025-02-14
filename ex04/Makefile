@@ -1,4 +1,4 @@
-NAME			=	Unnecessary_violence
+NAME			=	Sed_is_for_losers
 
 SRC_DIR		=	./src/
 OBJ_DIR		=	obj/
@@ -7,7 +7,7 @@ INCS_DIR	=	includes
 MAIN_INC	= -I $(INCS_DIR)
 INCS		=	$(shell find $(INCS_DIR) -type f -name "*.hpp")
 
-SRC			=	main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRC			=	main.cpp
 				
 OBJ			=	$(addprefix $(OBJ_DIR), $(SRC:.cpp=.o))
 

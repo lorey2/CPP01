@@ -6,7 +6,7 @@
 /*   By: lorey <lorey@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 02:29:24 by lorey             #+#    #+#             */
-/*   Updated: 2025/02/14 02:51:20 by lorey            ###   LAUSANNE.ch       */
+/*   Updated: 2025/02/14 14:12:37 by lorey            ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ class HumanB
 {
 	private:
 		std::string _name;
-		Weapon _w1;		
+		Weapon *_w1;		
 	public:
 		HumanB(std::string name);
 		~HumanB();
 		void	attack();
+		void	setWeapon(Weapon &w2);
 };
 
 

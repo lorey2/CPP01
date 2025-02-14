@@ -6,7 +6,7 @@
 /*   By: lorey <lorey@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 02:09:00 by lorey             #+#    #+#             */
-/*   Updated: 2025/02/14 02:27:06 by lorey            ###   LAUSANNE.ch       */
+/*   Updated: 2025/02/14 14:15:47 by lorey            ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Weapon
 		Weapon(std::string name);
 		~Weapon();
 		void	setType(std::string type);
-		const	std::string &getType();
+		const	std::string &getType(void);
 };
 
 

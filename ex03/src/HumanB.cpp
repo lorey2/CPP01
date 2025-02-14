@@ -6,7 +6,7 @@
 /*   By: lorey <lorey@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 02:51:38 by lorey             #+#    #+#             */
-/*   Updated: 2025/02/14 02:55:06 by lorey            ###   LAUSANNE.ch       */
+/*   Updated: 2025/02/14 14:19:51 by lorey            ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 HumanB::HumanB(std::string name)
 {
 	_name = name;
+	_w1 = NULL;
 }
 
 HumanB::~HumanB(void)
@@ -24,7 +25,19 @@ HumanB::~HumanB(void)
 
 void	HumanB::attack(void)
 {
-	std::cout << _name
-			  << ": Attacked with: "
-			  << _w1.getType();
+	if (_w1 == NULL)
+		std::cout << "[HumanB] :"
+				  << _name
+				  << "has no weapon"
+				  << std::endl;
+	else
+		std::cout << _name
+				  << ": Attacked with: "
+				  << _w1->getType()
+		    	  << std::endl;
+}
+
+void	HumanB::setWeapon(Weapon &w2)
+{
+	_w1 = &w2;
 }
