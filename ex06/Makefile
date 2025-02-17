@@ -1,4 +1,4 @@
-NAME			=	Harl_filter
+NAME			=	harlfilter
 
 SRC_DIR		=	./src/
 OBJ_DIR		=	obj/
