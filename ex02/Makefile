@@ -18,7 +18,7 @@ $(OBJ_DIR)%.o:	$(SRC_DIR)%.cpp
 		@mkdir -p $(OBJ_DIR)
 		$(CC) ${CFLAGS}  $(MAIN_INC) -o $@ -c $<
 
-$(NAME)		:	$(OBJ) $(INCS)
+$(NAME)		:	$(OBJ)
 		$(CC) $(CFLAGS) $(OBJ) $(MAIN_INC) -o $(NAME)
 					
 all			:	$(NAME)

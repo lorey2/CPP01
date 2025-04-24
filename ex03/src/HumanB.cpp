@@ -6,7 +6,7 @@
 /*   By: lorey <lorey@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 02:51:38 by lorey             #+#    #+#             */
-/*   Updated: 2025/02/14 14:19:51 by lorey            ###   LAUSANNE.ch       */
+/*   Updated: 2025/04/24 17:08:56 by lorey            ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ HumanB::~HumanB(void)
 
 void	HumanB::attack(void)
 {
+	//as _w1 is a pointer, it can be NULL, which is what we want to check here
 	if (_w1 == NULL)
 		std::cout << "[HumanB] :"
 				  << _name

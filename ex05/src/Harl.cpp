@@ -6,7 +6,7 @@
 /*   By: lorey <loic.rey.vs@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 17:13:16 by lorey             #+#    #+#             */
-/*   Updated: 2025/02/14 17:48:51 by lorey            ###   LAUSANNE.ch       */
+/*   Updated: 2025/04/24 18:54:44 by lorey            ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,21 @@ void	Harl::error(void)
 
 void	Harl::complain(std::string level)
 {
+	//we store the level with correct index
 	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	//we store the member functions with correct index
+	//Harl::*fun[4])()
+	//		fun[4] is just an array
+	//		Harl::* says that it is an array of pointer to Harl member functions
+	//		() is the place where we normally put argument
 	void (Harl::*fun[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
 	for (int i = 0; i < 4; i++)
 	{
+		//we compare the input with the array
 		if (level == levels[i])
 		{
+			//we launch the function with the correct index
 			(this->*fun[i])();
 			return;
 		}
