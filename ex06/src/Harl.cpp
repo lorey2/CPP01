@@ -6,7 +6,7 @@
 /*   By: lorey <loic.rey.vs@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 17:13:16 by lorey             #+#    #+#             */
-/*   Updated: 2025/02/16 22:50:30 by lorey            ###   LAUSANNE.ch       */
+/*   Updated: 2025/05/05 15:38:53 by lorey            ###   LAUSANNE.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,15 +61,15 @@ void	Harl::complain(std::string level)
 		case 0:
 			std::cout << "[ DEBUG ]" << std::endl;
 			Harl::debug();
-			i++;
+			__attribute__((fallthrough));
 		case 1:
 			std::cout << "[ INFO ]" << std::endl;
 			Harl::info();
-			i++;
+			__attribute__((fallthrough));
 		case 2:
 			std::cout << "[ WARNING ]" << std::endl;
 			Harl::warning();
-			i++;
+			__attribute__((fallthrough));
 		case 3:
 			std::cout << "[ ERROR ]" << std::endl;
 			Harl::error();
